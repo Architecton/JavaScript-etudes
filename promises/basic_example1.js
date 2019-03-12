@@ -38,5 +38,14 @@ function orderPants(inventory) {
 }
 
 // Print promise object
-console.log(orderPants(inventory))
+console.log(orderPants(inventory));
 ////////////////
+
+// Pass resolve and reject functions to promise for it to call.
+orderPants(inventory)
+	.then((result) => {
+		console.log(result);
+	})
+	.catch((result) => {
+		console.log(result);
+	});
